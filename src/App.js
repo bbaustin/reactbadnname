@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React , { Component, useState } from 'react';
+import Search from './Search.js';
+import Result from './Result.js';
+import Contacts from './Contacts.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+
+const App = () => {
+  
+  const [bandnameToSearch, setBandnameToSearch] = useState("type something");
+  const [discogsResult, setDiscogsResult] = useState("waiting");
+  // state = {
+  //   discogsResult: []
+  // }
+
+
+  
+
+    return (
+     <div className="App"> 
+       <Search 
+          bandnameToSearch={bandnameToSearch}
+        />
+        <Result
+          discogsResult={discogsResult}
+        />
+      </div>
+    );
+  }
 export default App;
