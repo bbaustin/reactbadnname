@@ -1,14 +1,12 @@
 import React from 'react';
 
-class Result extends React.Component {
-  render() {
-    const apiResult = "results coming in..."
-    return(
+const Result = props => {
+  return( 
       <div>
-        <p>Result: {apiResult}</p>
+        <h1>{props.discogsResult}</h1>
       </div>
-    )
-  }
+  )
 }
+
 
 export default Result;
